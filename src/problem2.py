@@ -8,8 +8,8 @@ difficult elements as time permits.
 Every student should be able to print the string and the
 length of the string.  If you don't remember how, LOOK at
 your programming sessions!!!   
-PUT YOUR NAME HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+Logan Jilek.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -48,9 +48,9 @@ def test_problem2():
     print('Test case 1 Expected: ')
     print('*********************************************')
     string_of_characters = 'civic'
-    print('String entered: ',string_of_characters)
-    print('Length of string: ',5)
-    print('Number of alphabetic characters: ',5)
+    print('String entered: ', string_of_characters)
+    print('Length of string: ', 5)
+    print('Number of alphabetic characters: ', 5)
     print('Number of digits: ', 0)
     print('Reversed string is: civic')
     print('The user entered a palindrome')
@@ -59,8 +59,53 @@ def test_problem2():
     print('Test case 1 Actual: ')
     problem3(string_of_characters)
     print('*********************************************')
-    # TODO: 2. Write at least three reasonable test cases below.
+    # Done: 2. Write at least three reasonable test cases below.
     #         Three excellent test cases are worth 10 points
+
+    print('MY TESTS')
+    print()
+    print('Test case 2 Expected: ')
+    print()
+    string_of_characters = 'WorkingCode'
+    print('String entered: ', string_of_characters)
+    print('Length of string: ', 11)
+    print('Number of alphabetic characters: ', 11)
+    print('Number of digits: ', 0)
+    print('Reversed string is: edoCgnikroW')
+    print('The user entered a normal string')
+    print()
+    print('Test case 2 Actual: ')
+    problem3(string_of_characters)
+
+    print()
+    print('Test case 3 Expected: ')
+    print()
+    string_of_characters = 'numbers123'
+    print('String entered: ', string_of_characters)
+    print('Length of string: ', 10)
+    print('Number of alphabetic characters: ', 7)
+    print('Number of digits: ', 3)
+    print('Reversed string is: 321srebmun')
+    print('The user entered a normal string')
+    print()
+    print('Test case 3 Actual: ')
+    problem3(string_of_characters)
+    print()
+
+    print()
+    print('Test case 4 Expected: ')
+    print()
+    string_of_characters = 'HelloWorld'
+    print('String entered: ', string_of_characters)
+    print('Length of string: ', 10)
+    print('Number of alphabetic characters: ', 10)
+    print('Number of digits: ', 0)
+    print('Reversed string is: dlroWolleH')
+    print('The user entered a normal string')
+    print()
+    print('Test case 4 Actual: ')
+    problem3(string_of_characters)
+    print()
 
 
 def problem3(string_of_characters):
@@ -121,7 +166,7 @@ def problem3(string_of_characters):
        Reversed string: b21a
        The user entered a normal string
     """
-    # TODO: 3. Implement this function.
+    # Done: 3. Implement this function.
     # To implement this function, you need to reverse a string.
     # If you write your own method to reverse a string and solve
     # the entire problem, you will get 25 points. If you use the
@@ -131,6 +176,28 @@ def problem3(string_of_characters):
 # If this module is running at the top level (as opposed to being
 # imported by another module), then call the 'main' function.
 # -----------------------------------------------------------------------
+    print('String entered:', string_of_characters)
+    print('Length of string:', len(string_of_characters))
+    char = 0
+    num = 0
+    for k in range(len(string_of_characters)):
+        if string_of_characters[k].isdigit():
+            num = num + 1
+        elif string_of_characters[k].isalpha():
+            char = char + 1
+
+    print('Number of Alphabetic characters:', char)
+    print('Number of digits:', num)
+
+    flip = ''
+    for j in range(len(string_of_characters) - 1, -1, -1):
+        flip = flip + string_of_characters[j]
+    print('Reversed String:', flip)
+
+    if flip == string_of_characters:
+        print('The user entered a palindrome')
+    else:
+        print('The user entered a normal string')
 
 
 if __name__ == '__main__':
